@@ -14,7 +14,6 @@ chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = "/Applications/AppicationsMe/Google Chrome.app/Contents/MacOS/Google Chrome"
 driver = webdriver.Chrome(executable_path='/Users/maxhager/Applications/AppicationsMe/chromedriver_mac_arm64/chromedriver', chrome_options=chrome_options)
 
-
 # Navigate to the example website
 url = 'http://127.0.0.1:5500/sampleSite.html'
 driver.get(url)

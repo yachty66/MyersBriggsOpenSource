@@ -23,6 +23,7 @@ Project should open source the myers briggs test.
 - [x] get all the html from https://www.16personalities.com/free-personality-test
 - [x] click on first page everywhere agree and than click on the next button and see if this works
 - [x] repeat this as often until results are coming 
-- [ ] implement functionality that answering of questions is random 
-- [ ] 
+- [x] implement functionality that answering of questions is random 
+- [ ] save each question somewhere 
+- [ ] put data into appropriate json format {"question 1 ": "a", "q2": 30, "result": "Proagonist"}
 

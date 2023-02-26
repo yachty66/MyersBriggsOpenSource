@@ -1,2 +1,2 @@
-for i in range(0, 10):
-    print(i)
+with open("results.csv", "a") as file:
+    file.write("hallo meein" + "\n") 
