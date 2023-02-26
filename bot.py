@@ -14,12 +14,12 @@ while True:
     chrome_options.binary_location = "/Applications/AppicationsMe/Google Chrome.app/Contents/MacOS/Google Chrome"
     driver = webdriver.Chrome(executable_path='/Users/maxhager/Applications/AppicationsMe/chromedriver_mac_arm64/chromedriver', chrome_options=chrome_options)
     url = 'https://www.16personalities.com/free-personality-test'
-    
+
     driver.get(url)
     time.sleep(2)
-    
+
     l_with_all_questions_and_answers = []
-    
+
     for i in range(0, 10):
         results = []
         agree_max_buttons = driver.find_elements("xpath", '//div[@aria-label="agree max"]')
@@ -45,14 +45,14 @@ while True:
         )
         next_button.click()
         time.sleep(2)
-
+        
     html = driver.page_source
     soup = BeautifulSoup(html, 'html.parser')
-    title = soup.title.text.strip()
+    personality_code = soup.find('span', {'class': 'type__code'})
+    title = personality_code.text.strip()
     l_with_all_questions_and_answers.append(title)
-    print(l_with_all_questions_and_answers)
     with open("results.txt", "a") as file:
         line = ";".join(l_with_all_questions_and_answers).replace("\n", "")
         file.write("%s\n" % line)
 
-#driver.quit()
+    #driver.quit()
