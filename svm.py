@@ -1,6 +1,6 @@
 ################### IMPORTS ###################
 
-from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_recall_fscore_support
 import data as data
@@ -10,12 +10,12 @@ import data as data
 d = data.Data()
 train_x, train_y, test_x, test_y = d.get_data()
 
-gbc = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, random_state=0)
-gbc.fit(train_x, train_y)
+svm = SVC(kernel='linear', C=1, random_state=0)
+svm.fit(train_x, train_y)
 
 ################### Evaluation ###################
 
-prediction = gbc.predict(test_x)
+prediction = svm.predict(test_x)
 true = test_y
 
 prediction_for_scores = prediction.tolist()
