@@ -2,7 +2,7 @@ class Data:
     def __init__(self):
         self.X = []
         self.Y = []
-        mapping = {
+        self.mapping = {
             "ISTJ-T": 1,
             "ISTJ-A": 2,
             "ISFJ-T": 3,
@@ -38,7 +38,7 @@ class Data:
         }
         self.read_data()
         self.encode_x()
-        self.encode_y
+        self.encode_y()
         
     def read_data(self):
         with open("results.txt", "r") as file:

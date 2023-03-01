@@ -11,7 +11,6 @@ import data as data
 
 d = data.Data()
 train_x, train_y, test_x, test_y = d.get_data()
-
 clf = RandomForestClassifier()
 clf.fit(train_x, train_y)
 
