@@ -2,5 +2,5 @@
 
 ## Projects Description
 
-Reverse engieered myers–briggs type indicator with accuracy of 93%.
+Myers–briggs type indicator prediction with accuracy of 93%.
 
